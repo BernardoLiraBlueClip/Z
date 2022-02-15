@@ -3,7 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     </head>
     <body>        
-	    <h1>VERSIÓN 6.7</h1>
+	    <h1>VERSIÓN 6.8</h1>
 	    
 <!------------------------------------------>
 
@@ -20,30 +20,27 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = false;
-		//embedded_svc.settings.language = 'es-CL'; //Por ejemplo, ingrese 'en' o 'en-US'
-		embedded_svc.settings.prechatBackgroundImgURL = "https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true";
-		embedded_svc.settings.smallCompanyLogoImgURL = "https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true";
+		embedded_svc.settings.displayHelpButton = true; //O falso
+		embedded_svc.settings.language = ''; //Por ejemplo, introduzca 'en' o 'en-US'
 
-		embedded_svc.settings.defaultMinimizedText = ''; //(Toma como valor predeterminado Sesión de chat con un experto)
-		embedded_svc.settings.disabledMinimizedText = 'El chat no está funcionando'; //(Toma como valor predeterminado Agente sin conexión)
+		//embedded_svc.settings.defaultMinimizedText = '...'; //(Toma como valor predeterminado Sesión de chat con un experto)
+		//embedded_svc.settings.disabledMinimizedText = '...'; //(Toma como valor predeterminado Agente sin conexión)
 
-		embedded_svc.settings.loadingText = 'Empezando...'; //(Toma como valor predeterminado Cargando)
-		//embedded_svc.settings.storageDomain = '*'; //(Establece el dominio para su desarrollo de modo que los visitantes puedan navegar por subdominios durante una sesión de chat)
+		//embedded_svc.settings.loadingText = ''; //(Toma como valor predeterminado Cargando)
+		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Establece el dominio para su desarrollo de modo que los visitantes puedan navegar por subdominios durante una sesión de chat)
 
-		// Configuración para Plática
+		// Configuración para Chat
 		//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 			// Returns a valid button ID.
 		//};
-		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Establece el relleno automático de los campos del formulario previo al chat
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Establece la cumplimentación automática de los campos del formulario previo al chat
 		//embedded_svc.settings.fallbackRouting = []; //Una matriz de identificadores de botones, de usuario o userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Toma como valor predeterminado la opción Contacto)
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-
-		embedded_svc.waitingStateBackgroundImgURL = "";
+		
 		embedded_svc.init(
 			'https://zurichcl--dev2.my.salesforce.com',
 			'https://dev2-chilenaconsolidada.cs195.force.com',
@@ -70,13 +67,6 @@
 		document.body.appendChild(s);
 	} else {
 		initESW('https://service.force.com');
-	}
-</script>
-
-	    
-<script type='text/javascript'>
-	function bootstrapChat() {
-		embedded_svc.bootstrapEmbeddedService();
 	}
 </script>
 	    
@@ -109,6 +99,12 @@ $myPanel.animate({
 
 
 }); 
+</script>
+
+<script type='text/javascript'>
+	function bootstrapChat() {
+		embedded_svc.bootstrapEmbeddedService();
+	}
 </script>
 
 	<img style="max-width: 100%;" src="top sitio zurich.png"><br />
