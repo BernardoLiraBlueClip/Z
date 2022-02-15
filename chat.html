@@ -3,7 +3,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	</head>
     <body>        
-    	<h1>VERSIÓN 7.1</h1>
+    	<h1>VERSIÓN 7.2</h1>
 	    <!--
 		<div id="live-chat" style="position: fixed; bottom: 0px; right:100px; z-index:5; cursor: pointer; " onclick="bootstrapChat()">
 			<a onclick="bootstrapChat()"><img src="https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true"></a>
@@ -76,6 +76,7 @@
 		s.setAttribute('src', 'https://zurichcl--dev2.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
+			document.write('HOLA');
 		};
 		document.body.appendChild(s);
 	} else {
