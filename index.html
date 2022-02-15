@@ -21,7 +21,7 @@
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //O falso
 		embedded_svc.settings.language = ''; //Por ejemplo, introduzca 'en' o 'en-US'
-		embedded_svc.settings.smallCompanyLogoImgURL = "https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true";
+		//embedded_svc.settings.smallCompanyLogoImgURL = "https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true";
 		//embedded_svc.settings.prechatBackgroundImgURL = "https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true";
 
 
@@ -72,26 +72,16 @@
 		initESW('https://service.force.com');
 	}
 </script>
-<!-- nuevo -->
-	    
-<script type='text/javascript' src='https://c.la2-c1cs-ia4.salesforceliveagent.com/content/g/js/54.0/deployment.js'></script>
-<script type='text/javascript'>
-liveagent.init('https://d.la2-c1cs-ia4.salesforceliveagent.com/chat', '572020000004CD5', '00D020000008p2R');
-</script>
-	   
-<!-- más nuevo desde 5.2 -->
-	    
-<img id="liveagent_button_online_573020000004CID" style="display: none; border: 0px none; cursor: pointer" onclick="liveagent.startChat('573020000004CID')" src="https://dev2-chilenaconsolidada.cs195.force.com/resource/1644853102000/agente" /><img id="liveagent_button_offline_573020000004CID" style="display: none; border: 0px none; " src="https://dev2-chilenaconsolidada.cs195.force.com/resource/1644853102000/agente" />
-<script type="text/javascript">
-if (!window._laq) { window._laq = []; }
-window._laq.push(function(){liveagent.showWhenOnline('573020000004CID', document.getElementById('liveagent_button_online_573020000004CID'));
-liveagent.showWhenOffline('573020000004CID', document.getElementById('liveagent_button_offline_573020000004CID'));
-});</script>
-
 	    
 <!-- más nuevo desde 5.8 -->
+
 	    
-<!-- newer -->
+<script type='text/javascript'>
+	function bootstrapChat() {
+		embedded_svc.bootstrapEmbeddedService();
+	}
+</script>
+	    
 <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
 <script type="text/javascript">
 $(document).ready(function() {
