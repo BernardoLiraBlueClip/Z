@@ -3,7 +3,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	</head>
     <body>        
-    	<h1>VERSIÓN 7.6</h1>
+    	<h1>VERSIÓN 7.7</h1>
 	    <!--
 		<div id="live-chat" style="position: fixed; bottom: 0px; right:100px; z-index:5; cursor: pointer; " onclick="bootstrapChat()">
 			<a onclick="bootstrapChat()"><img src="https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true"></a>
@@ -91,9 +91,11 @@ liveagent.init('https://d.la2-c1cs-ia4.salesforceliveagent.com/chat', '572020000
 		embedded_svc.bootstrapEmbeddedService();
 		}
 	</script>
-<button onclick="bootstrapChat()">
-	Click me to show the Embedded Chat experience.
-</button>
+<!-- <button onclick="bootstrapChat()"> -->
+	    <div id="fixedbutton">
+		<a onclick="bootstrapChat()"><img src="https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true"></a>
+	    </div>
+<!-- </button> -->
 
 	<!--
 <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
@@ -126,7 +128,13 @@ $myPanel.animate({
 
 }); 
 </script>
-
+<style>
+	#fixedbutton {
+	    position: fixed;
+	    bottom: 0px;
+	    right: 0px; 
+	}
+</style>
 <script type='text/javascript'>
 	function bootstrapChat() {
 		embedded_svc.bootstrapEmbeddedService();
