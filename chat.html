@@ -1,23 +1,23 @@
 <html>
-    <head>
+	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	    
 	</head>
-    <body>        
-    	<h1>VERSIÓN 8.8</h1>
+    <body>     
+		<!-- seguimiento de la versión de prueba. Innecesario -->
+    	<h1>VERSIÓN 8.9</h1>
 	    
-<!------------------------------------------>
 <script type='text/javascript' src='https://c.la2-c1cs-ia4.salesforceliveagent.com/content/g/js/54.0/deployment.js'></script>
 <script type='text/javascript'>
-liveagent.init('https://d.la2-c1cs-ia4.salesforceliveagent.com/chat', '572020000004CD5', '00D020000008p2R');
+	liveagent.init('https://d.la2-c1cs-ia4.salesforceliveagent.com/chat', '572020000004CD5', '00D020000008p2R');
 </script>
 
-
-	<img style="max-width: 100%;" src="top sitio zurich.png"><br />
-	<img style="max-width: 100%;" src="mid sitio zurich.png"><br />
-	<img style="max-width: 100%;" src="bot sitio zurich.png"><br />
-	<img style="max-width: 100%;" src="end sitio zurich.png"><br />
+		<!-- estas imágenes simulan la página de Zurich, son innecesarias -->
+		<img style="max-width: 100%;" src="top sitio zurich.png"><br />
+		<img style="max-width: 100%;" src="mid sitio zurich.png"><br />
+		<img style="max-width: 100%;" src="bot sitio zurich.png"><br />
+		<img style="max-width: 100%;" src="end sitio zurich.png"><br />
 	    
+		<!-- este estilo también es innecesario, pero lo dejamos igual porque es de Salesforce -->
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #66BE1F;
@@ -28,6 +28,7 @@ liveagent.init('https://d.la2-c1cs-ia4.salesforceliveagent.com/chat', '572020000
 	}
 </style>
 
+<!-- estos scripts son claves y MANDATORIOS. Notar la línea "embedded_svc.settings.displayHelpButton = false;", que oculta el botón estándar -->
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
@@ -81,42 +82,33 @@ liveagent.init('https://d.la2-c1cs-ia4.salesforceliveagent.com/chat', '572020000
 	}
 </script>
 
-	    
-	    <script type='text/javascript'>
+	<!-- este es el script ("snap-in") que permite llamar al chat desde cualquier parte -->
+	<script type='text/javascript'>
 		function bootstrapChat() {
-		embedded_svc.bootstrapEmbeddedService();
+			embedded_svc.bootstrapEmbeddedService();
 		}
 	</script>
-	    <!-- BOTÓN DE CHAT DESDE 7.8 -->
-<!--  
-https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true
--->
+		
+		<!-- aquí está esa "cualquier parte" desde el que se llama al chat, que combina -->
+		<!-- primero: el estilo (mybutton) -->
+		<!-- segundo: la llamada (bootstrapChat) -->
+		<!-- tercero: la imagen del chat (img) -->
+		<!-- notar que estamos usando la imagen desde Salesforce, en una url de Sandbox. Tendrá que cambiar en producción -->
 		<div id="mybutton">
 			<a onclick="bootstrapChat()"><img src="https://dev2-chilenaconsolidada.cs195.force.com/resource/agente"></a>
-			<!-- <button class="feedback" onclick="bootstrapChat()"></button> -->
 		</div>	    
 	    
 
 <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
 
+<!-- este es el estilo de la imagen (el "<div>" donde está el botón que llama al chat -->
 <style>
-.feedback {
-  background-color: #31b0d5;
-  width: 113px;
-  height: 113px;
-  padding: 10px 20px;
-  border-radius: 4px;
-  border-color: white;
-  background-image: url("https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true"); 
-  cursor: pointer;
-}
-
-#mybutton {
-  cursor: pointer;
-  position: fixed;
-  bottom: -4px;
-  right: 15px;
-}
+	#mybutton {
+	  cursor: pointer;
+	  position: fixed;
+	  bottom: -4px;
+	  right: 15px;
+	}
 </style>
 
 	</body>
