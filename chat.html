@@ -3,7 +3,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	</head>
     <body>        
-    	<h1>VERSIÓN 8.0</h1>
+    	<h1>VERSIÓN 8.1</h1>
 	    <!--
 		<div id="live-chat" style="position: fixed; bottom: 0px; right:100px; z-index:5; cursor: pointer; " onclick="bootstrapChat()">
 			<a onclick="bootstrapChat()"><img src="https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true"></a>
@@ -93,7 +93,8 @@ liveagent.init('https://d.la2-c1cs-ia4.salesforceliveagent.com/chat', '572020000
 	</script>
 	    <!-- BOTÓN DE CHAT DESDE 7.8 -->
 	    <div id="mybutton">
-		<a onclick="bootstrapChat()"><img src="https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true"></a>
+		<!--<a onclick="bootstrapChat()"><img src="https://github.com/BernardoLiraBlueClip/Z/blob/main/agente.png?raw=true"></a>-->
+		    <button onclick="bootstrapChat()" class="feedback">Feedback</button>
 	    </div>
 
 	<!--
@@ -133,6 +134,13 @@ $myPanel.animate({
   position: fixed;
   bottom: -4px;
   right: 10px;
+}
+.feedback {
+  background-color: #31b0d5;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border-color: #46b8da;
 }
 </style>
 
